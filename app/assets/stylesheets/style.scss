@@ -1,8 +1,6 @@
-/* 全体影響 *//* 全体影響 *//* 全体影響 */
-
+/* 全体影響 *//* 全体影響 *//* 全体影響 *//* 全体影響 *//* 全体影響 */
 /* main color == amber darken-3 == #ff8f00 */
 $orange:#ff8f00;
-
 /* 補足color == grey lighten-1 == #bdbdbd */
 $grey:#bdbdbd;
 
@@ -18,7 +16,8 @@ hr {
 }
 
 
-/* TOP *//* TOP *//* TOP */
+
+/* TOP *//* TOP *//* TOP *//* TOP *//* TOP */
 .top {
   margin: 0 auto;
   text-align: center;
@@ -26,8 +25,7 @@ hr {
 
 
 
-/* パッケージ一覧 *//* パッケージ一覧 *//* パッケージ一覧 */
-
+/* パッケージ一覧 *//* パッケージ一覧 *//* パッケージ一覧 *//* パッケージ一覧 *//* パッケージ一覧 */
 /* パッケージ一覧全体 */
 .package {
   margin: 0 auto;
@@ -42,8 +40,7 @@ hr {
 
 
 
-/* パッケージ詳細 *//* パッケージ詳細 *//* パッケージ詳細 */
-
+/* パッケージ詳細 *//* パッケージ詳細 *//* パッケージ詳細 *//* パッケージ詳細 *//* パッケージ詳細 */
 /* パッケージ詳細全体 */
 .package_detail {
   margin: 0 auto;
@@ -86,11 +83,11 @@ hr {
   border-radius: 3px;
   transition: .4s;
   font-size: 18pt;
-}
 
-.square_btn:hover {
-  background: $orange;
-  color: white;
+  &:hover {
+    background: $orange;
+    color: white;
+  }
 }
 
 /* サブボタン */
@@ -104,9 +101,60 @@ hr {
   border-radius: 3px;
   transition: .4s;
   font-size: 8pt;
+
+  &:hover {
+    background: $grey;
+    color: white;
+  }
 }
 
-.square_sub_btn:hover {
-  background: $grey;
-  color: white;
+// picks画面 // picks画面 // picks画面 // picks画面 // picks画面
+.contents_picks {
+  // margin: 0 auto;
+  // text-align: center;
+}
+
+/* 画像の右下に文字を置く*/
+.relative {
+  position: relative;
+  float: left; /* 複数画像を横並びにするために記載*/
+  margin: 5px;
+
+}
+.absolute {
+  position: absolute;
+  bottom: 7px;
+  color: #fff;
+  background: rgba(0,0,0,.4); /* 透過。4つ目が0~1で設定可能*/
+  width: 161.8px; /* 背景画像の横幅に合わせる*/
+}
+
+.absolute p {
+  margin: 0;
+  padding: 0.3em 1em;
+  text-align: right;
+  font-size: 8pt;
+}
+
+/* 合計金額*/
+#total_price{
+  font-size: 18px;
+  color: $orange;
+}
+
+/* ラジオボタンの代わりに画像で選択できるために設定*/
+/* ラジオボタンを非表示*/
+.radio {
+  display: none;
+}
+
+/* 選択された画像の表示方法*/
+.radio:checked + .radio_image {
+  border: 3px $orange solid; /* オレンジ枠 */
+}
+
+/* 選択されていない画像の表示方法*/
+.radio + .radio_image {
+  /*border: 3px #ffffff solid;*/ /* 白枠 => 不要なのでコメントアウト */
+  /*background-color: #ffffff;*/
 }
