@@ -1,0 +1,13 @@
+<div class="package">
+  <% @packages.each do |package| %>
+    <div class="package_list" style="background-image: url(<%= package.image %>);">
+      <a href="/packages/<%= package.id %>"><%= simple_format(package.name) %></a>
+    </div>
+  <% end %>
+
+    <!-- サブボタンの表示 -->
+  <div class="#">
+    <a href="/" class="square_sub_btn">TOPに戻る</a>
+  </div>
+</div>
+
