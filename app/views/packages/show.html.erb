@@ -11,10 +11,10 @@
 
   <!-- サムネイル写真の表示 -->
   <div class="clearfix">
-  <% @items.each do |item| %>
+    <% @items.each do |item| %>
       <div class="grid">
         <ul>
-          <li><img src="<%= item.image %>"></li>
+          <li><img src="<%= item.image %>" height="70" width="70"></li>
         </ul>
       </div>
     <% end %>

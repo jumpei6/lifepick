@@ -109,8 +109,26 @@ hr {
 }
 
 // picks画面 // picks画面 // picks画面 // picks画面 // picks画面
+#picks_header-fixed{
+  position: fixed;
+  // ##z-index 前面に置きたい時に使用する。大きいほど前面に出る
+  z-index: 9999;
+  top:  0px;
+  left: 0px;
+  width:  100%;
+  height: 50px;
+}
+
+#picks_header-bk{
+  background-color: #fff;
+  top:  0px;
+  left: 0px;
+  width:  100%;
+  height: 50px;
+}
+
 .contents_picks {
-  // margin: 0 auto;
+  margin: 50px auto;
   // text-align: center;
 }
 
@@ -138,7 +156,7 @@ hr {
 
 /* 合計金額*/
 #total_price{
-  font-size: 18px;
+  font-size: 24px;
   color: $orange;
 }
 
@@ -155,6 +173,6 @@ hr {
 
 /* 選択されていない画像の表示方法*/
 .radio + .radio_image {
-  /*border: 3px #ffffff solid;*/ /* 白枠 => 不要なのでコメントアウト */
-  /*background-color: #ffffff;*/
+  // border: 3px #ffffff solid;
+  // background-color: #ffffff;
 }
