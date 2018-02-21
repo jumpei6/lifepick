@@ -16,14 +16,14 @@
   </div>
   <hr>
 
-  <div>
+  <%= form_tag("/pick", method: :post ) do %>
     <% @options.each do |options| %>
       <div class="clearfix">
         <p><%= options[:title] %></p>
         <% options[:items].each do |items| %>
           <div class="relative">
             <label>
-              <input name="<%= items[:category_id] %>" type="radio" class="radio radio_price" data-price="<%= items[:price] %>" checked>
+              <input name="<%= items[:category_id] %>" type="radio" class="radio radio_price" data-price="<%= items[:price] %>" checked value="<%= items[:id] %>">
               <img src="<%= items[:image] %>" class="radio_image" height="100" width="161.8">
               <figcaption class="absolute"><p><%= items[:name] %></p></figcaption>
             </label>
@@ -31,11 +31,12 @@
         <% end %>
       </div>
     <% end %>
-  </div>
+    <input type="submit">
+  <% end %>
 
   <!-- メインボタンの表示 -->
   <div class="#">
-    <a href="#" class="square_btn">完成イメージを見る（未作成）</a>
+    <a href="/pick/index" class="square_btn">完成イメージを見る（未作成）</a>
   </div>
 
   <!-- サブボタンの表示 -->
