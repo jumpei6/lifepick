@@ -2,17 +2,6 @@ class Item < ActiveRecord::Base
   belongs_to  :package
   belongs_to  :category
 
-  # テストで書いてもらったもの
-  # def self.fetch_items_priced_less_than(price)
-  #   self.where("price < ?", price)
-  # end
-
-  # 自分が作成した、category_idごとの配列に同一idのitemを格納したもの
-  # def self.grouped_items_by_categories
-  #   ids = Category.ids
-  #   ids.map{|item| Item.where(category_id: item)}
-  # end
-
   # 引数であるpackage_idと同一のItem全てを、category_idごとに「category_id.name」と「同じcategory_idをもつItem全て」もハッシュにする関数
   # ##def self.hoge == クラスメソッド。
   # def Item.hogeとやっても同じ意味。modelクラスのレコードを検索する時などに使う

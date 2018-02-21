@@ -9,8 +9,8 @@ class PackagesController < ApplicationController
     # Packageテーブルから、該当idのレコードを取得
     # @packageとしてDBデータを表示@view => インスタンス変数に
     @package = Package.find(params[:id])
-    # Itemテーブルから、該当package.idのレコードを全て取得
-    @items = @package.items
+    # Itemテーブルから、該当package.idのレコードのうち、default=1のものだけを取得
+    @items_default = @package.items.where(default: 1)
   end
 
   def pick # 独自メソッド
