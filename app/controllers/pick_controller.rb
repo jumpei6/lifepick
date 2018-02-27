@@ -11,7 +11,10 @@ class PickController < ApplicationController
   end
 
   def create
-    # ids = items_params.values.map(&:to_i)
+    # logger.info #log情報出力用
+    # .values == ハッシュからvalueだけを取得するメソッド
+    # 文字列をto_iで数字に戻す
+    ids = items_params.values.map(&:to_i)
     # user_id = current_user.id
     # begin
     #   ApplicationRecord.transaction do
@@ -42,7 +45,8 @@ class PickController < ApplicationController
   # end
 
   def items_params
-    # params.permit(Category.all.map { |c| c.id }.map { |id| id.to_s })
-    # params.permit(Category.all.map(&:id).map(&:to_s))
+    # map(&:id) == map { |c| c.id}
+    # paramsの中には文字列を入れるので、to_sに変更
+    params.permit(Category.all.map(&:id).map(&:to_s))
   end
 end

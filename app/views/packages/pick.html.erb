@@ -23,7 +23,7 @@
         <% options[:items].each do |items| %>
           <div class="relative">
             <label>
-              <input name="<%= items[:category_id] %>" type="radio" class="radio radio_price" data-price="<%= items[:price] %>" checked value="<%= items[:id] %>">
+              <input name="<%= items[:category_id] %>" type="radio" class="radio radio_price" data-price="<%= items[:price] %>" value="<%= items[:id] %>" checked>
               <img src="<%= items[:image] %>" class="radio_image" height="100" width="161.8">
               <figcaption class="absolute"><p><%= items[:name] %></p></figcaption>
             </label>
